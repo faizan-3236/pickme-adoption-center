@@ -1,56 +1,43 @@
-<!-- Muhammad Faizam
-26I-3236
-SE-E -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PICK ME - Pet Adoption</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PICK ME - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar" aria-label="Main navigation">
-        <a class="brand" href="index.html">PICK ME</a>
-        <div class="nav-links">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="pets.html">Available Pets</a>
-            <a href="adopt.html">Adoption Certificate</a>
-        </div>
+  <header>
+    <h1>PICK ME</h1>
+    <p class="tagline">They Deserve a New Life</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pets.html">Available Pets</a>
+      <a href="adopt.html">Adoption Certificate</a>
     </nav>
+  </header>
 
-    <main class="homepage" id="home">
-        <h1>PICK ME</h1>
-        <h2>They Deserve a New Life</h2>
+  <main>
+    <section class="intro">
+      <img class="hero-image" src="pets.svg" alt="Illustration of a dog and a cat">
+      <h2>Give a Pet a Loving Home</h2>
+      <p>Every pet deserves care, kindness, and a place to call home. Meet our lovely pets and find your new friend.</p>
+      <button type="button" onclick="adoptNow()">Adopt Now</button>
+    </section>
 
-        <img src="pets.webp" alt="Pets available for adoption" class="pets-image">
+    <h2>Meet Our Pets</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Age</th></tr></thead>
+      <tbody>
+        <tr><td>Tom</td><td>2 years</td></tr>
+        <tr><td>Bob</td><td>3 years</td></tr>
+        <tr><td>Gary</td><td>6 months</td></tr>
+      </tbody>
+    </table>
+    <p class="center"><a class="text-link" href="pets.html">See all available pets</a></p>
+  </main>
 
-        <table id="pets">
-            <thead>
-                <tr>
-                    <th>PET NAME</th>
-                    <th>AGE</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>TOM</td>
-                    <td>2 Years</td>
-                </tr>
-                <tr>
-                    <td>BOB</td>
-                    <td>3 Years</td>
-                </tr>
-                <tr>
-                    <td>GARY</td>
-                    <td>6 Months</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <button type="button" id="adopt-button">ADOPT NOW</button>
-        <p id="message" role="status" aria-live="polite"></p>
-    </main>
+  <footer><p>© 2026 PICK ME Pet Adoption</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>

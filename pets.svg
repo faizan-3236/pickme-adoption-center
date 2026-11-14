@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+<title id="title">A dog and a cat</title><desc id="desc">A friendly illustrated brown dog and cream-colored cat sitting together.</desc>
+<rect width="640" height="360" rx="18" fill="#f8efdf"/>
+<circle cx="320" cy="175" r="125" fill="#ead8bf"/>
+<!-- dog -->
+<ellipse cx="235" cy="235" rx="82" ry="76" fill="#a8754d"/>
+<circle cx="235" cy="145" r="70" fill="#b98258"/>
+<ellipse cx="179" cy="133" rx="25" ry="49" transform="rotate(-25 179 133)" fill="#805638"/>
+<ellipse cx="291" cy="133" rx="25" ry="49" transform="rotate(25 291 133)" fill="#805638"/>
+<circle cx="211" cy="143" r="7" fill="#38271d"/><circle cx="259" cy="143" r="7" fill="#38271d"/>
+<ellipse cx="235" cy="170" rx="22" ry="15" fill="#f1d8c2"/><ellipse cx="235" cy="164" rx="8" ry="6" fill="#38271d"/>
+<path d="M222 182 Q235 194 248 182" fill="none" stroke="#38271d" stroke-width="4" stroke-linecap="round"/>
+<!-- cat -->
+<ellipse cx="405" cy="238" rx="73" ry="72" fill="#d8b995"/>
+<circle cx="405" cy="151" r="66" fill="#e5c9a7"/>
+<path d="M354 112 L358 48 L397 91 Z" fill="#e5c9a7" stroke="#b18a68" stroke-width="5"/>
+<path d="M414 91 L454 48 L457 116 Z" fill="#e5c9a7" stroke="#b18a68" stroke-width="5"/>
+<path d="M365 86 L365 66 L383 91 Z M431 90 L449 66 L448 91 Z" fill="#c98f85"/>
+<circle cx="383" cy="151" r="6" fill="#38271d"/><circle cx="428" cy="151" r="6" fill="#38271d"/>
+<path d="M398 171 Q405 179 412 171" fill="none" stroke="#805638" stroke-width="4" stroke-linecap="round"/>
+<path d="M390 175 L356 169 M390 184 L356 190 M420 175 L454 169 M420 184 L454 190" stroke="#805638" stroke-width="3" stroke-linecap="round"/>
+</svg>
