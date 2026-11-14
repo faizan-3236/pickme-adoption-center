@@ -251,7 +251,7 @@ button:focus-visible,
     width: min(100%, 440px);
     margin: 24px auto;
     padding: 20px;
-    border: 1px solid #b89a7b;
+    border: 5px solid #b89a7b;
     border-radius: 6px;
     background-color: #fffdf5;
     text-align: left;
