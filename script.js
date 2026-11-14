@@ -4,7 +4,6 @@ const homeMessage = document.getElementById("message");
 
 if (adoptButton && homeMessage) {
     adoptButton.addEventListener("click", function () {
-        window.alert("Thank you for choosing to adopt! Let's find your new friend.");
         window.location.href = "pets.html";
     });
 }
@@ -44,5 +43,19 @@ if (adoptionForm && certificateArea) {
     const printButton = document.getElementById("print-certificate");
     printButton.addEventListener("click", function () {
         window.print();
+    });
+}
+
+
+// Contact Us page: show a confirmation after the visitor submits the demo form.
+const contactForm = document.getElementById("contact-form");
+const contactSuccess = document.getElementById("contact-success");
+
+if (contactForm && contactSuccess) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        contactSuccess.hidden = false;
+        contactForm.reset();
+        contactSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
     });
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PICK ME</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">PICK ME</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pets.html">Available Pets</a>
+            <a href="adopt.html">Adoption Certificate</a>
+            <a href="contact.html" aria-current="page">Contact Us</a>
+        </div>
+    </nav>
+
+    <main class="contact-page">
+        <h1>CONTACT US</h1>
+        <h2>We would love to hear from you</h2>
+
+        <p class="page-intro">
+            Have a question about adopting a pet? Send us a message using the
+            form below. We are happy to help!
+        </p>
+
+        <form id="contact-form" class="contact-form">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="contact-name"
+                   placeholder="Enter your name" required>
+
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="contact-email"
+                   placeholder="Enter your email address" required>
+
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="contact-subject"
+                   placeholder="What is your message about?" required>
+
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" name="contact-message"
+                      placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+
+        <p id="contact-success" role="status" aria-live="polite" hidden>
+            Thank you for contacting PICK ME! Your message has been noted.
+        </p>
+
+        <div class="page-navigation">
+            <a class="back-link" href="index.html">← Back to Home</a>
+            <a class="next-link" href="pets.html">View Available Pets →</a>
+        </div>
+    </main>
+</body>
+</html>
