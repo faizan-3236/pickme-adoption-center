@@ -1,53 +1,95 @@
-<!--Muhammad Faizam
-26I-3236
-SE-E -->
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet pets looking for a loving home at PICK ME pet adoption.">
+  <title>PICK ME | They Deserve a New Life</title>
   <link rel="stylesheet" href="style.css">
-  <title>Pet Adoption</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <center>
-    
-  <h1>PICK ME</h1>
-  <h2>They Deserve a New Life</h2>
-  <img src="pets.webp" alt="PETS IMAGE">
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="PICK ME home">🐾 PICK ME</a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#pets">Our Pets</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="#pets">Meet the pets</a>
+  </header>
 
-  <table>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE LOVE CHANGES EVERYTHING</p>
+        <h1>PICK ME</h1>
+        <h2>They Deserve a New Life</h2>
+        <p class="intro">Every pet deserves a safe place to call home. Meet our lovely friends and discover the joy of giving one of them a forever family.</p>
+        <a class="primary-button" href="#pets">Find your new friend <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="pets.webp" alt="A group of adorable pets waiting for a loving home">
+        <div class="photo-note"><span>♡</span> Your new best friend is waiting</div>
+      </div>
+    </section>
 
-  <tr>
-    <td>PET NAME</td>
-    <td>AGE</td>
+    <section class="pets-section" id="pets">
+      <div class="section-heading">
+        <p class="eyebrow">MEET YOUR MATCH</p>
+        <h2>Pets Looking for a Home</h2>
+        <p>Here are a few of the wonderful companions waiting to meet you.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Pet name</th><th scope="col">Age</th><th scope="col">Availability</th><th scope="col">Interested?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="pet-emoji">🐱</span> TOM</td><td>2 Years</td><td><span class="status">Looking for a home</span></td><td><button class="text-button adopt-pet" data-pet="Tom">Adopt Tom</button></td></tr>
+            <tr><td><span class="pet-emoji">🐶</span> BOB</td><td>3 Years</td><td><span class="status">Looking for a home</span></td><td><button class="text-button adopt-pet" data-pet="Bob">Adopt Bob</button></td></tr>
+            <tr><td><span class="pet-emoji">🐾</span> GARY</td><td>6 Months</td><td><span class="status">Looking for a home</span></td><td><button class="text-button adopt-pet" data-pet="Gary">Adopt Gary</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Want to welcome one of them into your family? Send us an adoption enquiry.</p>
+      <button class="primary-button open-form" type="button">ADOPT NOW <span aria-hidden="true">→</span></button>
+    </section>
 
-  </tr>
+    <section class="about-section" id="about">
+      <div class="about-mark" aria-hidden="true">♡</div>
+      <div>
+        <p class="eyebrow">WHY ADOPTION MATTERS</p>
+        <h2>A second chance at a happy life</h2>
+        <p>Adoption is more than bringing a pet home. It is choosing kindness, building a bond, and giving an animal the care and belonging it deserves. Thank you for considering adoption.</p>
+      </div>
+    </section>
 
-  <tr>
-    <td>TOM</td>
-    <td>2 Years</td>
-    
-  </tr>
+    <section class="contact-strip" id="contact">
+      <div><p class="eyebrow">LET'S MAKE A CONNECTION</p><h2>Have a question?</h2><p>We would love to hear from you about welcoming a pet into your home.</p></div>
+      <a class="secondary-button" href="mailto:hello@pickme-pets.example">Contact us</a>
+    </section>
+  </main>
 
-  <tr>
-    <td>BOB</td>
-    <td>3 Years</td>
- </tr>  
-   <tr>
-    <td>GARY</td>
-    <td>6 Months</td>
- </tr>  
- 
- 
-</table>
-<br>
-<br>
-<button>
-  
-  ADOPT NOW
-</button>
-</center>
+  <footer><a class="brand footer-brand" href="#home">🐾 PICK ME</a><p>They deserve a new life. You could be the reason.</p><small>© <span id="year"></span> PICK ME Pet Adoption</small></footer>
+
+  <dialog id="adoption-dialog" aria-labelledby="form-title">
+    <div class="dialog-top"><div><p class="eyebrow">TAKE THE FIRST STEP</p><h2 id="form-title">Adoption enquiry</h2></div><button class="close-dialog" type="button" aria-label="Close form">×</button></div>
+    <p class="form-intro">Tell us a little about yourself and the pet you are interested in.</p>
+    <form id="adoption-form">
+      <label for="applicant-name">Your name</label>
+      <input id="applicant-name" name="name" type="text" placeholder="Enter your full name" required minlength="2">
+      <label for="applicant-email">Email address</label>
+      <input id="applicant-email" name="email" type="email" placeholder="you@example.com" required>
+      <label for="pet-choice">Which pet interests you?</label>
+      <select id="pet-choice" name="pet" required><option value="">Choose a pet</option><option>Tom</option><option>Bob</option><option>Gary</option><option>I'm open to meeting any pet</option></select>
+      <label for="reason">Why would you like to adopt?</label>
+      <textarea id="reason" name="reason" rows="3" placeholder="A few words about your interest..."></textarea>
+      <button class="primary-button submit-button" type="submit">Send enquiry</button>
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      <p class="privacy-note">Demo form: your details are not sent or stored. Connect a backend or form service to receive real applications.</p>
+    </form>
+  </dialog>
 </body>
 </html>
