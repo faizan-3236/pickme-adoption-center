@@ -1,0 +1,74 @@
+<!-- Page 3 of 3: Adoption Certificate -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Certificate - PICK ME</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">PICK ME</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pets.html">Available Pets</a>
+            <a href="adopt.html" aria-current="page">Adoption Certificate</a>
+        </div>
+    </nav>
+
+    <main class="adoption-page">
+        <h1>THANK YOU FOR ADOPTING!</h1>
+        <h2>A new friendship begins today</h2>
+
+        <p class="page-intro">
+            Thank you for giving a pet a loving home. Fill in the details below
+            to create your PICK ME adoption certificate.
+        </p>
+
+        <form id="adoption-form" class="adoption-form">
+            <label for="adopter-name">Your Full Name</label>
+            <input type="text" id="adopter-name" name="adopter-name"
+                   placeholder="Enter your full name" required>
+
+            <label for="pet-name">Pet You Adopted</label>
+            <select id="pet-name" name="pet-name" required>
+                <option value="">Select a pet</option>
+                <option value="Tom">Tom</option>
+                <option value="Bob">Bob</option>
+                <option value="Gary">Gary</option>
+            </select>
+
+            <button type="submit">CREATE MY CERTIFICATE</button>
+        </form>
+
+        <section id="certificate-area" class="certificate-area" hidden aria-live="polite">
+            <p class="thank-you-message">Thank you for adopting and giving a pet a new beginning!</p>
+
+            <div class="certificate" id="adoption-certificate">
+                <p class="certificate-brand">PICK ME</p>
+                <h2>ADOPTION CERTIFICATE</h2>
+                <p class="certificate-small">This certificate is proudly presented to</p>
+                <p class="certificate-name" id="certificate-adopter"></p>
+                <p class="certificate-small">for welcoming</p>
+                <p class="certificate-pet" id="certificate-pet"></p>
+                <p class="certificate-small">
+                    into a loving home and promising a life filled with care and kindness.
+                </p>
+                <div class="certificate-footer">
+                    <span>With love, PICK ME</span>
+                    <span id="certificate-date"></span>
+                </div>
+            </div>
+
+            <button type="button" id="print-certificate">PRINT CERTIFICATE</button>
+        </section>
+
+        <div class="page-navigation">
+            <a class="back-link" href="pets.html">← Back to Available Pets</a>
+            <a class="next-link" href="index.html">Return to Home →</a>
+        </div>
+    </main>
+</body>
+</html>
