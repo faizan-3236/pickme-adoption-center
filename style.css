@@ -1,0 +1,9 @@
+body{
+    background-color: beige;
+}
+h1{
+    color:brown;
+}
+table, th, td{
+    border: 1px solid black;
+}
