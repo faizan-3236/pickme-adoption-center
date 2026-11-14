@@ -1,42 +1,48 @@
-// Homepage button: displays the required JavaScript alert, then opens the pets page.
-function adoptNow() {
-  window.alert("Thank you for your interest in adopting a pet!");
-  window.location.href = "pets.html";
+// Homepage button: show a simple message when the button is present.
+const adoptButton = document.getElementById("adopt-button");
+const homeMessage = document.getElementById("message");
+
+if (adoptButton && homeMessage) {
+    adoptButton.addEventListener("click", function () {
+        window.alert("Thank you for choosing to adopt! Let's find your new friend.");
+        window.location.href = "pets.html";
+    });
 }
 
-// Adoption form: creates a personalized certificate.
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("adoption-form");
-  const petSelect = document.getElementById("pet-name");
+// Adoption certificate: create a personalized certificate after form submission.
+const adoptionForm = document.getElementById("adoption-form");
+const certificateArea = document.getElementById("certificate-area");
 
-  // If a pet was selected on the Available Pets page, preselect it here.
-  const selectedPet = new URLSearchParams(window.location.search).get("pet");
-  if (petSelect && ["Tom", "Bob", "Gary"].includes(selectedPet)) {
-    petSelect.value = selectedPet;
-  }
+if (adoptionForm && certificateArea) {
+    const petSelect = document.getElementById("pet-name");
+    const params = new URLSearchParams(window.location.search);
+    const selectedPet = params.get("pet");
 
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+    if (selectedPet && ["Tom", "Bob", "Gary"].includes(selectedPet)) {
+        petSelect.value = selectedPet;
+    }
 
-      const adopterName = document.getElementById("adopter-name").value.trim();
-      const petName = petSelect.value;
+    adoptionForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-      if (!adopterName || !petName) {
-        window.alert("Please enter your name and select a pet.");
-        return;
-      }
+        const adopterName = document.getElementById("adopter-name").value.trim();
+        const petName = petSelect.value;
 
-      document.getElementById("certificate-owner").textContent = adopterName;
-      document.getElementById("certificate-pet").textContent = petName;
-      document.getElementById("certificate-date").textContent =
-        new Date().toLocaleDateString();
+        if (!adopterName || !petName) {
+            return;
+        }
 
-      document.getElementById("certificate").hidden = false;
+        document.getElementById("certificate-adopter").textContent = adopterName;
+        document.getElementById("certificate-pet").textContent = petName;
+        document.getElementById("certificate-date").textContent =
+            new Date().toLocaleDateString();
 
-      // Required console.log example: records the successful demo form submission.
-      console.log("Adoption certificate generated for " + adopterName + " and " + petName + ".");
-      document.getElementById("certificate").scrollIntoView({ behavior: "smooth" });
+        certificateArea.hidden = false;
+        certificateArea.scrollIntoView({ behavior: "smooth", block: "start" });
     });
-  }
-});
+
+    const printButton = document.getElementById("print-certificate");
+    printButton.addEventListener("click", function () {
+        window.print();
+    });
+}
